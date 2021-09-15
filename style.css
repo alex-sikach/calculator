@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+body {
+    max-width: 100%;
+}
+.calc {
+    margin-top: 3%;
+    border: 1px solid black;
+    min-width: 350px;
+    max-width: max-content;
+    max-height: max-content;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    /* align-items: center; */
+    flex-direction: row;
+}
+.leftf {
+    display: flex;
+    flex-direction: column;
+}
+.rightf {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 0.01fr);
+    grid-gap: 3%;
+    margin: 3%;
+    max-width: max-content;
+    max-height: max-content;
+    float: left;
+}
+.actions {
+    display: grid;
+    grid-template-columns: repeat(4, 0.01fr);
+    grid-gap: 3%;
+    margin: 3%;
+    max-width: max-content;
+    max-height: max-content;
+    float: left;
+}
+.main_actions {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    max-height: max-content;
+    float: right;
+    /* margin: 3%; */
+    top: 0;
+}
+.extra {
+    max-width: max-content;
+    float: left;
+    max-height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 0.01fr);
+    grid-gap: 3%;
+    margin: 3%;
+}
+.extr {
+    width: 50px;
+    height: 50px;
+}
+.main_a {
+    width: 50px;
+    height: 50px;
+}
+.action {
+    width: 50px;
+    height: 50px;
+
+}
+.number {
+    width: 50px;
+    height: 50px;
+}
+.res {
+    text-align: right;
+    margin: 3%;
+    max-width: max-content;
+    max-height: max-content;
+}
+.equals {
+    height: 300px;
+    width: 50px;
+    float: right;
+}

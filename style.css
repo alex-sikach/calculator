@@ -12,23 +12,27 @@ body {
     min-width: 350px;
     max-width: max-content;
     max-height: max-content;
-    height: 400px;
+    min-height: 400px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    /* align-items: center; */
     flex-direction: row;
+    justify-content: stretch;
 }
 .leftf {
     display: flex;
     flex-direction: column;
-    width: max-content;
-
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 .rightf {
     display: flex;
     flex-direction: row-reverse;
     justify-content: stretch;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    margin-right: 10px;
 }
 .numbers {
     display: grid;
@@ -55,7 +59,7 @@ body {
     max-height: max-content;
     float: right;
     /* margin: 3%; */
-    top: 0;
+    bottom: 0;
 }
 .extra {
     max-width: max-content;

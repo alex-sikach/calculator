@@ -22,10 +22,13 @@ body {
 .leftf {
     display: flex;
     flex-direction: column;
+    width: max-content;
+
 }
 .rightf {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: stretch;
 }
 .numbers {
     display: grid;

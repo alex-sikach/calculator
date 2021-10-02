@@ -7,90 +7,116 @@ body {
     max-width: 100%;
 }
 .calc {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 25px 2fr 3fr 1fr;
+
+    align-content: start;
     margin-top: 3%;
     border: 1px solid black;
-    min-width: 350px;
-    max-width: max-content;
-    max-height: max-content;
-    height: 400px;
+    /* min-width: 350px; */
+    width: max-content;
+    max-width: 400px;
+    /* max-height: 200px; */
+    height: max-content;
+    /* min-height: 400px; */
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    /* align-items: center; */
-    flex-direction: row;
 }
-.leftf {
-    display: flex;
-    flex-direction: column;
+/* .leftf {
     width: max-content;
 
 }
 .rightf {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: stretch;
-}
+} */
 .numbers {
     display: grid;
     grid-template-columns: repeat(3, 0.01fr);
-    grid-gap: 3%;
-    margin: 3%;
+    align-self: start;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
     max-width: max-content;
     max-height: max-content;
-    float: left;
+    border: 3px solid rgb(107, 18, 18);
 }
 .actions {
     display: grid;
     grid-template-columns: repeat(4, 0.01fr);
-    grid-gap: 3%;
-    margin: 3%;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
     max-width: max-content;
     max-height: max-content;
-    float: left;
+    align-self: start;
+    border: 3px solid green;
 }
 .main_actions {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(1, 0.01fr);
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
     max-width: max-content;
     max-height: max-content;
-    float: right;
-    /* margin: 3%; */
     top: 0;
+    border: 3px solid yellow;
 }
 .extra {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    align-self: start;
     max-width: max-content;
-    float: left;
     max-height: max-content;
     display: grid;
     grid-template-columns: repeat(3, 0.01fr);
-    grid-gap: 3%;
-    margin: 3%;
+    border: 3px solid red;
 }
 .extr {
-    width: 50px;
-    height: 50px;
+
 }
 .main_a {
-    width: 50px;
-    height: 50px;
+
 }
 .action {
-    width: 50px;
-    height: 50px;
 
 }
 .number {
-    width: 50px;
-    height: 50px;
+
 }
 .res {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
     text-align: right;
     margin: 3%;
     max-width: max-content;
     max-height: max-content;
 }
 .equals {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
     height: 300px;
     width: 50px;
-    float: right;
+}
+.btn {
+    width: 50px;
+    height: 50px;
 }

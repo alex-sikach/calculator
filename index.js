@@ -1,28 +1,65 @@
 var ans = '0';
-function clear() { /* clear */
-    document.querySelector('.res').value = '0';
-    ans = document.querySelector('.res').value;
+var show = '0';
+var last;
 
-    console.log(ans);
-};
+function clear()
+    {
+        isRoot = false;
+        show = '0';
+        ans = show;
+        document.querySelector('.res').value = show;
+
+        console.log(ans);
+        last = 'clear';
+    };
 document.querySelector('.action.clear').onclick = clear;
 
-function back() { /* <- */
-    ans = ans.split('');
-    ans.pop();
-    ans = ans.join('');
+function back()
+{ /* <- */
+    switch (last)
+    {
+        case 'root':
+            {
+                show = ans;
+                break;
+            };
+        default:
+            {
+                ans = ans.split('');
+                ans.pop();
+                ans = ans.join('');
+            }
+    }
+
     document.querySelector('.res').value = ans;
-    if(ans == '') {
+    if(ans == '')
+    {
         document.querySelector('.res').value = '0';
     }
-    // ans = document.querySelector('.res').value;
+    ans = document.querySelector('.res').value;
+    show = ans;
+    last = 'back';
 };
 document.querySelector('.action.back').onclick = back;
 
-function root() { /* sqrt() */
+const root_digit = '√(';
+{
+    function numberForRoot()
+    {
+        show = show.split('');
+        show.unshift(root_digit);
+        show.push(')');
+        show = show.join('');
 
-    ans = document.querySelector('.res').value;
+        document.querySelector('.res').value = show;
+    }
+}
+function root()
+{ /* sqrt() */
+    numberForRoot();
+    last = 'root';
 };
+document.querySelector('.action.sqrt').onclick = root;
 
 function degree() { /* degree */
 
@@ -50,49 +87,64 @@ function pi() {
 };
 
 function number(id) {
-    if (document.querySelector('.res').value == '0') {
-        //if res = 0 so after click on 8 res shouldn't become 08
-        document.querySelector('.res').value = document.querySelector(id).value;
-    } else {
-        document.querySelector('.res').value += document.querySelector(id).value;
+    if (ans == '0')
+    {
+        //if ans = 0 so after click on 8 ans shouldn't become 08
+        show = document.querySelector(id).value;
     }
-    ans = document.querySelector('.res').value;
+    else
+    {
+        show += document.querySelector(id).value;
+    }
+    ans = show;
+    document.querySelector('.res').value = show;
     console.log(ans);
-
-    // console.log(document.querySelector(id).value);
+    last = 'number';
 };
 
-function procents() {
+function procents()
+{
 
     ans = document.querySelector('.res').value;
 };
 
-function dote() {
+function dote()
+{
 
     ans = document.querySelector('.res').value;
 };
 
-function divide() {
+function divide()
+{
 
     ans = document.querySelector('.res').value;
 };
 
-function multiply() {
+function multiply()
+{
 
     ans = document.querySelector('.res').value;
 };
 
-function plus() {
+function plus()
+{
+    
+};
+
+function minus()
+{
 
     ans = document.querySelector('.res').value;
 };
 
-function minus() {
+function equals()
+{
+    switch (last)
+    {
+        case 'root': ans = Math.sqrt(ans); break;
+    }
 
-    ans = document.querySelector('.res').value;
+    document.querySelector('.res').value = ans;
+    show = String(ans);
 };
-
-function equals() {
-
-    ans = document.querySelector('.res').value;
-};
+document.querySelector('.equals').onclick = equals;

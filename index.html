@@ -9,46 +9,82 @@
 </head>
 <body>
     <div class="calc">
-        <!-- <div class="leftf"> -->
-            <div class="result">
-                <input type="text" value="0" class="res" id="result" readonly>
-            </div>
-            <div class="actions">
-                <button class="action clear btn">ac</button>
-                <button class="action back btn">&#60;-</button>
-                <button class="action sqrt btn">&radic;</button>
-                <button class="action degree btn">de</button>
-                <button class="action lbkt btn">(</button>
-                <button class="action rbkt btn">)</button>
-                <button class="action factorial btn">x!</button>
-                <button class="action pi btn">Pi</button>
-            </div>
-            <div class="numbers">
-                <button class="number btn" id="num_1">1</button>
-                <button class="number btn" id="num_2">2</button>
-                <button class="number btn" id="num_3">3</button>
-                <button class="number btn" id="num_4">4</button>
-                <button class="number btn" id="num_5">5</button>
-                <button class="number btn" id="num_6">6</button>
-                <button class="number btn" id="num_7">7</button>
-                <button class="number btn" id="num_8">8</button>
-                <button class="number btn" id="num_9">9</button>
-            </div>
-            <div class="extra">
-                <button class="extr btn">%</button>
-                <button class="extr number btn">0</button>
-                <button class="extr btn">.</button>
-            </div>
-        <!-- </div> -->
-        <!-- <div class="rightf"> -->
-            <button class="equals">=</button>
+        <div class="result">
+            <input type="text" value="0" class="res" id="result" readonly>
+        </div>
+        <div class="actions">
+            <button class="action clear btn">ac</button>
+            <button class="action back btn">&#60;-</button>
+            <button class="action sqrt btn">&radic;</button>
+            <button class="action degree btn">de</button>
+            <button class="action lbkt btn">(</button>
+            <button class="action rbkt btn">)</button>
+            <button class="action factorial btn">x!</button>
+            <button class="action pi btn">Pi</button>
+        </div>
+        <div class="numbers">
+                <button
+                    class="number btn"
+                    value="1"
+                    onclick="number('#num_1')"
+                    id="num_1">1</button>
+                <button
+                class="number btn"
+                value="2"
+                onclick="number('#num_2')"
+                id="num_2">2</button>
+                <button
+                    class="number btn"
+                    value="3"
+                    onclick="number('#num_3')"
+                    id="num_3">3</button>
+                <button
+                    class="number btn"
+                    value="4"
+                    onclick="number('#num_4')"
+                    id="num_4">4</button>
+                <button
+                    class="number btn"
+                    value="5"
+                    onclick="number('#num_5')"
+                    id="num_5">5</button>
+                <button
+                    class="number btn"
+                    value="6"
+                    onclick="number('#num_6')"
+                    id="num_6">6</button>
+                <button
+                    class="number btn"
+                    value="7"
+                    onclick="number('#num_7')"
+                    id="num_7">7</button>
+                <button
+                    class="number btn"
+                    value="8"
+                    onclick="number('#num_8')"
+                    id="num_8">8</button>
+                <button
+                    class="number btn"
+                    value="9"
+                    onclick="number('#num_9')"
+                    id="num_9">9</button>
+        </div>
+        <div class="extra">
+            <button class="extr btn">%</button>
+            <button
+                class="extr number btn"
+                value="0"
+                id="num_0"
+                onclick="number('#num_0')">0</button>
+            <button class="extr btn">.</button>
+        </div>
+        <button class="equals">=</button>
         <div class="main_actions">
             <button class="main_a btn">/</button>
             <button class="main_a btn">*</button>
             <button class="main_a btn">-</button>
             <button class="main_a btn">+</button>
         </div>
-        <!-- </div> -->
     </div>
 
     <!--JS-->

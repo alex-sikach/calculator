@@ -1,65 +1,98 @@
-var ans = 0;
+var ans = '0';
 function clear() { /* clear */
+    document.querySelector('.res').value = '0';
+    ans = document.querySelector('.res').value;
 
-    document.querySelector('.res').value = ans;
+    console.log(ans);
 };
+document.querySelector('.action.clear').onclick = clear;
+
 function back() { /* <- */
-
+    ans = ans.split('');
+    ans.pop();
+    ans = ans.join('');
     document.querySelector('.res').value = ans;
+    if(ans == '') {
+        document.querySelector('.res').value = '0';
+    }
+    // ans = document.querySelector('.res').value;
 };
+document.querySelector('.action.back').onclick = back;
+
 function root() { /* sqrt() */
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function degree() { /* degree */
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function lbkt() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function rbkt() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function factorail() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function pi() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
-function number() {
 
-    document.querySelector('.res').value = ans;
+function number(id) {
+    if (document.querySelector('.res').value == '0') {
+        //if res = 0 so after click on 8 res shouldn't become 08
+        document.querySelector('.res').value = document.querySelector(id).value;
+    } else {
+        document.querySelector('.res').value += document.querySelector(id).value;
+    }
+    ans = document.querySelector('.res').value;
+    console.log(ans);
+
+    // console.log(document.querySelector(id).value);
 };
+
 function procents() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function dote() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function divide() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function multiply() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function plus() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function minus() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };
+
 function equals() {
 
-    document.querySelector('.res').value = ans;
+    ans = document.querySelector('.res').value;
 };

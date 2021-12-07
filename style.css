@@ -9,9 +9,8 @@ body {
 .calc {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: 25px 2fr 3fr 1fr;
+    grid-template-rows: 25px repeat(3, auto);
 
-    align-content: start;
     margin-top: 3%;
     border: 1px solid black;
     /* min-width: 350px; */
@@ -22,6 +21,7 @@ body {
     /* min-height: 400px; */
     left: 50%;
     transform: translateX(-50%);
+    align-items: start;
 }
 /* .leftf {
     width: max-content;
@@ -32,7 +32,6 @@ body {
 .numbers {
     display: grid;
     grid-template-columns: repeat(3, 0.01fr);
-    align-self: start;
 
     grid-column-start: 1;
     grid-column-end: 3;
@@ -53,8 +52,8 @@ body {
     grid-row-end: 3;
 
     max-width: max-content;
-    max-height: max-content;
-    align-self: start;
+    /* max-height: max-content; */
+    height: auto;
     border: 3px solid green;
 }
 .main_actions {
@@ -83,18 +82,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 0.01fr);
     border: 3px solid red;
-}
-.extr {
-
-}
-.main_a {
-
-}
-.action {
-
-}
-.number {
-
 }
 .res {
     grid-column-start: 1;
